@@ -79,6 +79,7 @@
                             <constraint firstItem="hQh-vC-ODi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AfX-5o-dxl" secondAttribute="trailing" constant="220" id="xdg-eu-9wH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Wjc-cm-MWB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,7 +307,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы – осьминог!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtg-Yi-Tt2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы – осьминог!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtg-Yi-Tt2">
                                         <rect key="frame" x="83" y="68" width="122.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -326,10 +327,14 @@
                     <navigationItem key="navigationItem" title="Результат" id="kvi-wU-fJT">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="73c-wZ-ngI">
                             <connections>
-                                <action selector="doneButtonPressed:" destination="G8B-sK-US3" id="TCu-55-G9r"/>
+                                <action selector="doneButtonPressed:" destination="G8B-sK-US3" id="Q6a-15-a6m"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descLb" destination="Mtg-Yi-Tt2" id="NMN-tS-cVG"/>
+                        <outlet property="resultLB" destination="RZb-ww-1bI" id="u97-hf-g27"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZH6-hE-q9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

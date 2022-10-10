@@ -8,6 +8,7 @@
 import UIKit
 
 class QuestionsViewController: UIViewController {
+    // MARK: IB Outlets
     @IBOutlet var questionProgressView: UIProgressView!
     @IBOutlet var questionLabel: UILabel!
     
@@ -28,6 +29,7 @@ class QuestionsViewController: UIViewController {
         }
     }
     
+    // MARK: Private Properties
     private let questions = Question.getQuestions()
     private var answersChosen: [Answer] = []
     private var questionIndex = 0
@@ -35,11 +37,19 @@ class QuestionsViewController: UIViewController {
         questions[questionIndex].answers
     }
     
+    // MARK: Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
 
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultViewController else { return }
+        resultVC.answers = answersChosen
+    }
+    
+    // MARK: Navigation
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[buttonIndex]
@@ -48,6 +58,7 @@ class QuestionsViewController: UIViewController {
         nextQuestion()
     }
     
+    // MARK: IB Actions
     @IBAction func multipleAnswerButtonPressed() {
         for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
             if multipleSwitch.isOn {

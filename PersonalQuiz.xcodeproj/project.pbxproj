@@ -41,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30E930C828F3A033007F79F3 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				A8E42C1E28EB5818003ECE7F /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
 		A8E42C0928EB5817003ECE7F = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +72,7 @@
 				A8E42C2C28EB6203003ECE7F /* Models */,
 				A8E42C2928EB6168003ECE7F /* App */,
 				A8E42C2B28EB61E5003ECE7F /* Storyboards */,
-				A8E42C1E28EB5818003ECE7F /* Assets.xcassets */,
+				30E930C828F3A033007F79F3 /* Resourses */,
 			);
 			path = PersonalQuiz;
 			sourceTree = "<group>";
