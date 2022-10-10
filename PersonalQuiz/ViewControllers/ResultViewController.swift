@@ -13,8 +13,8 @@ class ResultViewController: UIViewController {
     @IBOutlet var resultLB: UILabel!
     @IBOutlet var descLb: UILabel!
     
-    // MARK: Public
-    var answers: [Answer]! = nil
+    // MARK: Public Properties
+    var answers: [Answer]!
     
     // MARK: Life cycles properties
     override func viewDidLoad() {
